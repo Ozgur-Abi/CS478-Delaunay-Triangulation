@@ -7,7 +7,7 @@ from delaunayDivideAndConquer import delaunayDC
 import matplotlib.pyplot as plt
 import matplotlib.tri
 import matplotlib.collections
-
+import time
     
 
 #Remove the point selected by user
@@ -19,9 +19,12 @@ def removePoint():
       
 #Plot Delaunay Triangulation with Divide And Conquer Algorithm
 def tridd():
+    startT = time.time()
     global radius
     #Create triangulation
     edges = delaunayDC(points)
+    endT = time.time()
+    print("Elapsed Time:" + str((endT - startT)))
     fig, ax = plt.subplots()
     ax.margins(0.1)
     ax.set_aspect('equal')
@@ -37,12 +40,16 @@ def tridd():
     
 #Plot Delaunay Triangulation with Randomized Incremental Algorithm 
 def triri():
+    startT = time.time()
     global radius
     #Create triangulation
     dt = DelaunayRI()
     for p in points:
         #print(p)
         dt.addPoint(p)
+        
+    endT = time.time()
+    print("Elapsed Time:" + str((endT - startT)))
         
     #Plot triangulation
     fig, ax = plt.subplots()
@@ -55,6 +62,7 @@ def triri():
     ax.triplot(matplotlib.tri.Triangulation(cx, cy, dt_tris), 'bo--')
     plt.title("Delaunay Triangulation with Randomized Incremental Algorithm")
     plt.show()
+    
 
 
 #Create the GUI
