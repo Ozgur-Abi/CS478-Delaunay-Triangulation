@@ -190,7 +190,7 @@ missing module named numpy.amax - imported by numpy (top-level), numpy.ma.core (
 missing module named matplotlib.tri.Triangulation - imported by matplotlib.tri (top-level), matplotlib.tri.trifinder (top-level), matplotlib.tri.tritools (top-level), matplotlib.tri.triinterpolate (top-level)
 missing module named gi - imported by matplotlib.cbook (delayed, conditional)
 missing module named pytest - imported by scipy._lib._testutils (delayed), matplotlib (delayed, optional)
-missing module named certifi - imported by matplotlib (delayed, optional)
+missing module named 'typing.io' - imported by importlib.resources (top-level)
 missing module named setuptools_scm - imported by matplotlib (delayed, conditional)
 missing module named numpy.random.randn - imported by numpy.random (top-level), scipy (top-level)
 missing module named numpy.random.rand - imported by numpy.random (top-level), scipy (top-level)
